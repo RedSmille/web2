@@ -13,6 +13,12 @@ from datetime import datetime
 from respuestas_chatbot import ObtenerRespuesta
 import locale
 
+# Descargar el tokenizer 'punkt' si no está disponible
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt")
+
 # Intentar establecer localización en español
 try:
     locale.setlocale(locale.LC_TIME, 'es_ES.UTF-8')
@@ -98,6 +104,7 @@ class ManejadorChatbot(http.server.SimpleHTTPRequestHandler):
                 TextoRespuesta = ObtenerRespuesta(IntentosDetectados, Intentos)
                 Respuesta = {"response": TextoRespuesta}
 
+            # Enviar la respuesta JSON correctamente
             self.send_response(200)
             self.send_header('Content-Type', 'application/json')
             self.end_headers()
