@@ -1,0 +1,1009 @@
+{
+    "intents": [
+        {
+            "tag": "saludo",
+            "preguntas": ["hola", "buenos dias", "buenas tardes", "ola"],
+            "respuestas": ["Hola, Como puedo ayudarte hoy ?", "Hola, Que Necesitas ?"]
+        },
+        {
+            "tag": "saludo 2",
+            "preguntas": ["como estas", "como te va", "como te ba", "que tal", "como andas", "que hay"],
+            "respuestas": ["Bien, ¿En qué puedo ayudarte?", "Todo bien, ¿En qué puedo ayudarte?"]
+        },
+        {
+            "tag": "ubicacion",
+            "preguntas": [
+                "en donde queda el hospital",
+                "donde se ubican",
+                "cual es tu ubicacion",
+                "cual es su ubicacion",
+                "cual es la ubi",
+                "dame la ubicacion",
+                "dame tu ubicacion",
+                "me pasas la ubicacion",
+                "ubicacion",
+                "ubi"
+            ],
+            "respuestas": ["Nos ubicamos en Blvd. Constitución S/N, Col. Jorge Almada, Culiacán, Sinaloa, México - C.P. 80200."]
+        },
+        {
+            "tag": "telefono",
+            "preguntas": [
+                "cual es su telefono",
+                "cual es el telefono",
+                "telefono",
+                "me pasas el telefono", 
+                "quiero llamar", 
+                "como llamo", 
+                "pasame el celular",
+                "pasame el telefono",
+                "numero de telefono",
+                "me puedes dar el numero del hospital",
+                "cual es el numero del hospital",
+                "cual es el numero de telefono del hospital",
+                "cual es el numero de telefono del hospital pediatrico de sinaloa"
+            ],
+            "respuestas": [
+                "\nDespues de marcar este numero, puedes digitar el numero de extencion del area solicitada. Puedes ver todas las extenciones en un archivo externo."
+            ]
+        },
+        {
+            "tag": "aniversario",
+            "preguntas": [
+                "aniversario", 
+                "cuando es tu cumple anos", 
+                "festeja", 
+                "cumple anos",
+                "anos"
+            ],
+            "respuestas": ["​El aniversario del Hospital Pediátrico de Sinaloa se celebra cada 13 de septiembre, conmemorando su inauguración el 13 de septiembre de 1980"]
+        },
+        {
+            "tag": "especialidades",
+            "preguntas": [
+                "que especialidades hay en el hospital", 
+                "lista de especialidades", 
+                "cuales son las especialidades disponibles", 
+                "que especialidades atienden aqui", 
+                "especialidades medicas en el hospital",
+                "que servicios medicos ofrecen",
+                "especialidades",
+                "espesialidades",
+                "espacialidades",
+                "espasialidades",
+                "especialidad",
+                "espesialidad",
+                "espacialidad",
+                "espasialidad",
+                "especialistas",
+                "espesialistas",
+                "especialista",
+                "espesialista"
+            ],
+            "respuestas": [
+                "Estas son las principales especialidades médicas con las que cuenta el Hospital Pediátrico de Sinaloa:"
+            ]
+        },
+        {
+            "tag": "informacion_general",
+            "preguntas": [
+                "que es el hospital pediatrico de sinaloa", 
+                "informacion general del hospital", 
+                "cual es el proposito del hospital", 
+                "que servicios brindan en el hospital",
+                "info"
+            ],
+            "respuestas": [
+                "El Hospital Pediátrico de Sinaloa es un centro médico especializado en la atención integral de niñas, niños y adolescentes, ofreciendo servicios de alta calidad en diversas especialidades médicas."
+            ]
+        },
+        {
+            "tag": "horarios",
+            "preguntas": [
+                "cual es tu horario",
+                "cual es el horario",
+                "cuales son los horarios de atencion", 
+                "horarios del hospital", 
+                "a que hora puedo ir al hospital", 
+                "esta abierto las 24 horas",
+                "puedo llevar a mi hijo",
+                "cuando cierran",
+                "cuando abren",
+                "horarios",
+                "horario",
+                "esta abierto",
+                "esta cerrado"
+            ],
+            "respuestas": [
+                "Ofrecemos atencion las 24 horas para urgencias.\nLos servicios de consulta externa tienen horarios establecidos según la especialidad."
+            ]
+        },
+        {
+            "tag": "correo",
+            "preguntas": [
+                "cual es el correo electronico del hospital", 
+                "correo electronico del hospital pediatrico de sinaloa", 
+                "como puedo enviar un correo al hospital", 
+                "correo de contacto del hospital",
+                "cual es tu correo",
+                "cual es su correo"
+            ],
+            "respuestas": [
+                "En HPS queremos escucharte, puedes escribirnos a: "
+            ]
+        },
+        {
+            "tag": "error",
+            "preguntas": [
+                "chinga tu madre wey",
+                "vete a la verga",
+                "culo",
+                "pito",
+                "pene",
+                "pendejo",
+                "chinga tu madre",
+                "vete a la chingada",
+                "estupido",
+                "tonto",
+                "cabron",
+                "mamacon",
+                "pinche",
+                "la chingada",
+                "chingas a tu madre",
+                "huevon",
+                "peluca",
+                "chingao",
+                "madre de tu madre",
+                "joto",
+                "maricon",
+                "puto",
+                "guey",
+                "culero"
+            ],
+            "respuestas": [
+                "No estoy seguro de entender eso. ¿Puedes reformular tu pregunta?",
+                "Lo siento, no tengo información sobre ese tema. ¿Puedes reformular tu pregunta?",
+                "Esa pregunta está fuera de mi conocimiento. Pregunta algo sobre el hospital."
+            ]
+        },
+        {
+            "tag": "informacion_adicional",
+            "preguntas": [
+                "tienen guarderia", 
+                "el hospital tiene servicio de guarderia", 
+                "que servicios adicionales ofrecen", 
+                "hay algun programa de apoyo a los padres", 
+                "hay alojamiento para los padres"
+            ],
+            "respuestas": [
+                "El Hospital Pediátrico de Sinaloa ofrece programas de apoyo a los padres y alojamiento en casos específicos. Para más detalles, te recomendamos contactar con el hospital directamente."
+            ]
+        },
+        {
+            "tag": "donaciones",
+            "preguntas": [
+                "puedo hacer una donacion", 
+                "como puedo hacer una donacion", 
+                "aceptan donaciones", 
+                "quiero hacer una donacion",
+                "donadores",
+                "donar",
+                "donacion",
+                "donasion",
+                "como puedo ayudar",
+                "donde puedo donar al hospital",
+                "donaciones",
+                "donasiones"
+            ],
+            "respuestas": [
+                "Agradecemos tu apoyo, tu generosidad puede transformar la vida de nuestros pequeños. ¡Acércate a Nosotros! 💙"
+            ]
+        },
+        {
+            "tag": "farmacia",
+            "preguntas": [
+                "donde puedo comprar medicamentos",
+                "tienen farmacia en el hospital",
+                "necesito informacion sobre medicamentos",
+                "donde esta la farmacia del hospital",
+                "puedo comprar medicina aqui",
+                "informacion sobre farmacia",
+                "tienen medicamentos disponibles",
+                "como puedo obtener mis medicamentos",
+                "farmacia del hospital",
+                "cual es el horario de la farmacia",
+                "donde consigo mi receta",
+                "medicamentos",
+                "farmacia",
+                "medicamento",
+                "donde compro mis medicinas",
+                "donde surto mi receta",
+                "puedo comprar medicinas en el hospital"
+            ],
+            "respuestas": [
+                "Gestiona el almacenamiento, control y dispensación de medicamentos, asegurando tratamientos seguros y eficaces conforme a indicaciones médicas. Para información sobre disponibilidad, consulta los canales oficiales."
+            ]
+        },
+        {
+            "tag": "fecha",
+            "preguntas": [
+                "que dia es hoy",
+                "cual es la fecha de hoy", 
+                "dime la fecha",
+                "dame la fecha",
+                "fecha",
+                "dia",
+                "que dia es",
+                "que dia es hoy"
+            ],
+            "respuestas": ["FECHA_ACTUAL"]
+        },
+        {
+            "tag": "logo",
+            "preguntas": [
+                "logo"
+            ],
+            "respuestas": ["Este es el logo del Hospital Pediátrico de Sinaloa."]
+        },
+        {
+            "tag": "hora",
+            "preguntas": [
+                "que hora es", 
+                "dime la hora", 
+                "hora actual",
+                "dame la hora",
+                "cual es la hora",
+                "que hora tienes",
+                "hora"
+            ],
+            "respuestas": ["HORA_ACTUAL"]
+        },
+        {
+            "tag": "info_chatbot",
+            "preguntas": [
+                "que es esto", 
+                "donde estoy", 
+                "que es esto",
+                "programa",
+                "bot",
+                "que esta pagina",
+                "que es el bot",
+                "que es un bot"
+            ],
+            "respuestas": ["Este es un <b>Chat BOT</b> del Hospital Pediátrico de Sinaloa, diseñado para ayudarte a obtener información rápida y eficiente sobre nuestros servicios. Los temas principales son:\n- Ubicación\n- Horarios de atención\n- Especialidades médicas\n- Información sobre el hospital\n- Contacto y teléfonos\n- Donaciones\n- Farmacia"]
+        },
+        {
+            "tag": "pagina_web",
+            "preguntas": [
+                "que es esta pagina",
+                "para que sirve esta pagina",
+                "de que trata esta pagina",
+                "que puedo hacer en esta pagina",
+                "para que es esta web",
+                "pagina",
+                "tienen pagina web",
+                "cual es su pagina",
+                "como encuentro su pagina web",
+                "donde esta su pagina",
+                "existe una pagina web del hospital",
+                "cual es la pagina web del hospital",
+                "me pueden dar la pagina web",
+                "cual es el sitio web del hospital",
+                "como accedo a la pagina web",
+                "tienen un sitio web",
+                "hay una web del hospital"
+            ],
+            "respuestas": [
+                "Contamos con una página web oficial donde podrás mantenerte al tanto de nuestras últimas noticias, actividades, campañas y todo lo nuevo que sucede en el hospital.\n¡Te invitamos a visitarla y mantenerte informado!"
+            ]
+        },
+        {
+            "tag": "redes_sociales",
+            "preguntas": [
+                "tienen redes sociales", 
+                "cuales son sus redes sociales", 
+                "donde los puedo seguir", 
+                "como los encuentro en redes",
+                "redes",
+                "redes sociales",
+                "facebook",
+                "instagram"
+            ],
+            "respuestas": ["Puedes seguirnos en nuestras redes sociales para estar al tanto de noticias, eventos y consejos de salud."]
+        },
+        {
+            "tag": "redes_sociales",
+            "preguntas": [
+                "tienen redes sociales", 
+                "cuales son sus redes sociales", 
+                "donde los puedo seguir", 
+                "como los encuentro en redes",
+                "redes",
+                "redes sociales",
+                "facebook",
+                "instagram"
+            ],
+            "respuestas": ["Puedes seguirnos en nuestras redes sociales oficiales para estar al tanto de noticias, eventos y consejos de salud."]
+        },
+        {
+            "tag": "extensiones",
+            "preguntas": [
+                "extension",
+                "extencion",
+                "extensiones",
+                "extenciones"
+            ],
+            "respuestas": [
+                "Aquie estan todas nuestra extenciones disponibles."
+            ]
+        },
+        {
+            "tag": "despedida",
+            "preguntas": [
+                "adios", 
+                "hasta luego", 
+                "nos vemos", 
+                "bye", 
+                "hasta la proxima",
+                "hasta pronto",
+                "cuídate",
+                "cuídate mucho",
+                "saludos",
+                "saludos a todos",
+                "saludos a tu familia"
+            ],
+            "respuestas": ["¡Hasta luego! Si necesitas más ayuda, no dudes en volver. ¡Cuídate!"]
+        },
+        {
+            "tag": "gracias",
+            "preguntas": [
+                "gracias", 
+                "muchas gracias", 
+                "te agradezco", 
+                "mil gracias",
+                "gracias por tu ayuda",
+                "gracias por la informacion",
+                "gracias por ayudarme",
+                "gracias por tu apoyo",
+                "gracias por tu tiempo"
+            ],
+            "respuestas": ["¡De nada! Estoy aquí para ayudarte."]
+        },
+        {
+            "tag": "valores",
+            "preguntas": [
+                "valores",
+                "cuales son los valores del hospital",
+                "que valores promueven",
+                "valores institucionales",
+                "valores del hospital pediatrico de sinaloa",
+                "que valores practican",
+                "me puedes decir los valores",
+                "hablenme sobre los valores",
+                "tienen valores como institucion",
+                "valores humanos del hospital"
+            ],
+            "respuestas": [
+                "<b>Valores del Hospital Pediátrico de Sinaloa</b> \nPromovemos el trabajo en equipo como base para alcanzar metas comunes, fomentamos el profesionalismo mediante un servicio de calidad, compromiso social y amor por lo que hacemos, y practicamos la honestidad como principio fundamental para actuar con integridad y disposición al cambio en beneficio de nuestros pacientes y la sociedad."
+            ]
+        },
+        {
+            "tag": "mision_vision",
+            "preguntas": [
+                "mision y vision",
+                "mision",
+                "vision",
+                "cual es la mision y vision del hospital",
+                "cual es la mision",
+                "cual es la vision",
+                "mision y vision del hospital",
+                "me puedes decir la mision y vision",
+                "objetivos del hospital",
+                "mision del hospital",
+                "vision del hospital",
+                "que busca el hospital",
+                "que objetivo tiene el hospital pediatrico de sinaloa",
+                "que quieren lograr como hospital",
+                "a donde quiere llegar el hospital"
+            ],
+            "respuestas": [
+                "<b>Misión:</b> Brindar atención médica especializada y ética a la población infantil, con calidez humana y compromiso social."
+            ]
+        },
+        {
+            "tag": "alianza_estrategica",
+            "preguntas": [
+                "alianza estrategica",
+                "alianza",
+                "aliansa",
+                "estrategica",
+                "alianza estrategica con el hospital",
+                "alianza estrategica del hospital pediatrico de sinaloa",
+                "alianza estrategica del hospital pediatrico de sinaloa con la universidad autonoma de sinaloa"
+            ],
+            "respuestas": [
+                
+                "Esta área se encarga de gestionar convenios, fortalecer la vinculación institucional y promover colaboraciones con organismos nacionales e internacionales en beneficio del hospital y sus pacientes. Para más información, por favor utiliza los canales oficiales."
+            ]
+        },
+        {
+            "tag": "almacen_general",
+            "preguntas": [
+                "almacen",
+                "almasen",
+                "general",
+                "almacen general del hospital pediatrico de sinaloa",
+                "almacen general",
+                "almacen general del hospital",
+                "almacenes",
+                "almacen del hospital",
+                "almacen del hospital pediatrico de sinaloa",
+                "almacen del hospital pediatrico de sinaloa con la universidad autonoma de sinaloa"
+            ],
+            "respuestas": [
+                "Su función principal es garantizar la recepción, resguardo, control y distribución eficiente de insumos, medicamentos y materiales necesarios para el óptimo funcionamiento del hospital. Para más información, por favor utiliza los canales oficiales."
+            ]
+        },
+        {
+            "tag": "sub_almacen",
+            "preguntas": [
+                "almacen",
+                "almasen",
+                "sub almacen",
+                "sub",
+                "sut amacen",
+                "sut",
+                "que es el sub almacen",
+                "que es el subalmacen",
+                "funciones del sub almacen",
+                "funciones del subalmacen",
+                "para que sirve el sub almacen",
+                "para que sirve el subalmacen",
+                "donde esta el sub almacen",
+                "donde esta el subalmacen",
+                "que hacen en el sub almacen del hospital",
+                "que hacen en el subalmacen del hospital",
+                "informacion sobre el sub almacen",
+                "informacion sobre el subalmacen",
+                "como contactar al sub almacen",
+                "como contactar al subalmacen",
+                "quien administra el sub almacen",
+                "quien administra el subalmacen",
+                "que se guarda en el sub almacen",
+                "que se guarda en el subalmacen",
+                "como funciona el sub almacen",
+                "como funciona el subalmacen",
+                "sub almacen del hospital pediatrico de sinaloa",
+                "subalmacen del hospital pediatrico de sinaloa"
+            ],
+            "respuestas": [
+                "El subalmacén se encarga del manejo y distribución específica de ciertos insumos o áreas dentro del hospital. Para más detalles, consulta los canales oficiales del Hospital Pediátrico de Sinaloa."
+            ]
+        },        
+        {
+            "tag": "apoyo_nutricional",
+            "preguntas": [
+                "apoyo nutricional",
+                "apoyo nutrisional",
+                "apoyo",
+                "nutricional",
+                "nutrisional",
+                "nutricion",
+                "nutrision",
+                "nutricionista",
+                "nutrisionista",
+                "nutriologo",
+                "area de apoyo nutricional",
+                "nutricion",
+                "nutricional",
+                "departamento de nutrición",
+                "servicio de apoyo nutricional",
+                "nutricion del hospital",
+                "nutricion hospitalaria",
+                "nutriólogo",
+                "nutricionista",
+                "apoyo nutricional del hospital",
+                "area nutricional del hospital pediatrico de sinaloa"
+            ],
+            "respuestas": [
+                "Esta área es responsable de evaluar, planificar y supervisar la alimentación de los pacientes hospitalizados, garantizando que reciban una nutrición adecuada y personalizada de acuerdo a sus necesidades médicas. Además, colabora con otras áreas clínicas para apoyar el tratamiento y la recuperación de los pacientes. Para más información, por favor utiliza los canales oficiales."
+            ]
+        },
+        {
+            "tag": "archivo_clinico",
+            "preguntas": [
+                "archivo clinico",
+                "archivo",
+                "clinico",
+                "historial médico",
+                "expediente clínico",
+                "expedientes médicos",
+                "dónde está el archivo clínico",
+                "quién administra el archivo clinico",
+                "archivo del hospital",
+                "archivo clínico del hospital pediatrico de sinaloa"
+            ],
+            "respuestas": [
+                "Esta área es responsable de organizar, custodiar y controlar el acceso a los expedientes clínicos de los pacientes, asegurando la confidencialidad, integridad y disponibilidad de la información médica. Para más información, por favor utiliza los canales oficiales."
+            ]
+        },
+        {
+            "tag": "aula_capacitacion",
+            "preguntas": [
+                "aula de capacitacion",
+                "aula",
+                "capacitacion",
+                "capacitaciones",
+                "capasitacion",
+                "capacitasion",
+                "capasitasion",
+                "capasitaciones",
+                "capasitasiones",
+                "capacitazion",
+                "capasitazion",
+                "capasitaziones",
+                "capacitaziones",
+                "quiero una capasitacion",
+                "quiero una capacitacion",
+                "como accedo a una capacitacion",
+                "como accedo a una capasitacion",
+                "informacion sobre aula de capacitacion",
+                "informacion sobre aula de capasitacion",
+                "donde esta el aula de capacitacion",
+                "quien administra el aula de capacitacion",
+                "aula de capacitacion hospital pediatrico de sinaloa",
+                "capacitaciones hospital",
+                "capasitaciones hospital"
+            ],
+            "respuestas": [
+                "Esta área se encarga de coordinar, organizar y brindar espacios de formación, actualización y desarrollo profesional para el personal del hospital. Contribuye al fortalecimiento de competencias técnicas y humanas que impactan directamente en la calidad de atención a los pacientes. Para más información, por favor utiliza los canales oficiales."
+            ]
+        },
+        {
+            "tag": "biomedica_ingenieria",
+            "preguntas": [
+                "biomedica",
+                "biomedica ingenieria",
+                "ingenieria biomedica",
+                "departamento de biomedica",
+                "area de biomedica",
+                "area de ingenieria biomedica",
+                "biomedika",
+                "vimedica",
+                "injenieria",
+                "inyenieria",
+                "biomedica hospital",
+                "ingenieria hospital",
+                "quien administra biomedica",
+                "quien es el encargado de biomedica",
+                "ingenieria hospital pediatrico de sinaloa",
+                "biomedica hospital pediatrico de sinaloa",
+                "equipo medico mantenimiento",
+                "soporte tecnico de equipos medicos"
+            ],
+            "respuestas": [
+                "Se encarga de supervisar, mantener y garantizar el funcionamiento óptimo del equipamiento médico utilizado en el hospital. Su labor es esencial para asegurar la disponibilidad, seguridad y eficacia de los dispositivos médicos utilizados en la atención a los pacientes. Para más información, por favor utiliza los canales oficiales."
+            ]
+        },
+        {
+            "tag": "calidad",
+            "preguntas": [
+                "calidad",
+                "calidad hospitalaria",
+                "hospitalaria",
+                "calidad del hospital",
+                "calidad hospital pediatrico de sinaloa",
+                "calidad hospital pediatrico",
+                "calidad hospitalaria pediatrico de sinaloa",
+                "calidad hospitalaria pediatrico",
+                "quien administra calidad",
+                "quien es el encargado de calidad",
+                "area de calidad",
+                "departamento de calidad"
+            ],
+            "respuestas": [
+                "Esta area se encarga de implementar y supervisar los sistemas de gestión de calidad en el hospital, asegurando que se cumplan los estándares y protocolos establecidos para brindar una atención segura y eficaz a los pacientes. Para más información, por favor utiliza los canales oficiales."
+            ]
+        },
+        {
+            "tag": "cardiologia",
+            "preguntas": [
+                "cardio",
+                "cardiologia",
+                "tienen cardiologos",
+                "me pueden atender por problemas del corazon",
+                "area de cardiologia",
+                "consultas de cardiologia",
+                "hay especialistas en el corazon",
+                "puedo agendar una cita con cardiologia",
+                "donde esta el area de cardiologia",
+                "quiero ver a un cardiologo",
+                "quien es el cardiologo del hospital",
+                "cual es el horario de cardiologia",
+                "como puedo consultar con cardiologia",
+                "cardiologo disponible",
+                "atencion cardiologica pediatrica"
+            ],
+            "respuestas": [
+                "Aqui se ofrece atención especializada en enfermedades del corazón en niños. Para citas o información, comunícate por los canales oficiales del hospital."
+            ]
+        },
+        {
+            "tag": "central_de_cuentas",
+            "preguntas": [
+                "central de cuentas",
+                "central",
+                "cuentas",
+                "area de central de cuentas",
+                "departamento de central de cuentas",
+                "donde esta central de cuentas",
+                "que hace la central de cuentas",
+                "funcion de central de cuentas",
+                "trabajan en central de cuentas",
+                "informacion de central de cuentas",
+                "puedo ir a central de cuentas",
+                "me pueden ayudar en central de cuentas"
+            ],
+            "respuestas": [
+                "Área fundamental en el funcionamiento administrativo del hospital, ya que garantiza el adecuado registro y control de los servicios médicos prestados. Se encarga de validar, consolidar y cerrar las cuentas hospitalarias de los pacientes, asegurando que toda la información esté correctamente documentada para facilitar los procesos de facturación y egresos. Para mayor información, te recomendamos acudir directamente al área o contactar a través de los canales oficiales."
+            ]
+        },
+        {
+            "tag": "centro_mezclas",
+            "preguntas": [
+                "centro de mezclas",
+                "area de centro de mezclas",
+                "departamento de mezclas",
+                "que hacen en el centro de mezclas",
+                "funcion del centro de mezclas",
+                "donde esta el centro de mezclas",
+                "que es el centro de mezclas",
+                "me pueden dar informacion del centro de mezclas",
+                "que hacen en el area de mezclas",
+                "quien trabaja en el centro de mezclas"
+            ],
+            "respuestas": [
+                "Área especializada encargada de preparar de manera segura y estéril las soluciones intravenosas, nutriciones parenterales y medicamentos que requieren condiciones específicas. Su función principal es asegurar que las mezclas cumplan con los estándares de calidad y seguridad, optimizando el tratamiento médico de los pacientes hospitalizados. Para más detalles, puedes acercarte directamente al área o consultar los canales oficiales del hospital."
+            ]
+        },
+        {
+            "tag": "ceye",
+            "preguntas": [
+                "ceye",
+                "area de ceye",
+                "departamento de ceye",
+                "que hacen en ceye",
+                "funcion de ceye",
+                "que es ceye",
+                "trabajan en ceye",
+                "que significa ceye",
+                "quien trabaja en ceye",
+                "informacion de ceye"
+            ],
+            "respuestas": [
+                "Área responsable de la limpieza, preparación, esterilización y distribución del material e instrumental médico quirúrgico que se utiliza en todo el hospital. Su labor garantiza condiciones de seguridad y asepsia en los procedimientos, previniendo infecciones y asegurando el bienestar de los pacientes. Para mayor información, puedes acudir directamente al área o contactar a través de los canales oficiales."
+            ]
+        },
+        {
+            "tag": "cirugia",
+            "preguntas": [
+                "cirugia",
+                "area de cirugia",
+                "departamento de cirugia",
+                "que hacen en cirugia",
+                "funcion de cirugia",
+                "quien esta en cirugia",
+                "quien es el encargado de cirugia",
+                "informacion de cirugia",
+                "trabajan en cirugia",
+                "quiero saber sobre cirugia"
+            ],
+            "respuestas": [
+                "Se encarga de realizar procedimientos quirúrgicos programados y de urgencia, brindando atención especializada a los pacientes pediátricos que requieren intervención médica. Su labor es fundamental para el diagnóstico, tratamiento y recuperación de diversas patologías. Para más información, puedes acudir directamente al área o consultar los canales oficiales del hospital."
+            ]
+        },
+        {
+            "tag": "clinica_heridas",
+            "preguntas": [
+                "clinica de heridas",
+                "area de heridas",
+                "donde esta la clinica de heridas",
+                "quien esta en clinica de heridas",
+                "quien es el encargado de la clinica de heridas",
+                "que hacen en clinica de heridas",
+                "informacion de clinica de heridas",
+                "me pueden atender en clinica de heridas",
+                "clinica especializada en heridas",
+                "heridas",
+                "heridas pediátricas",
+                "heridas agudas",
+                "clinica",
+                "heridos"
+            ],
+            "respuestas": [
+                "Esta área se especializa en la valoración, tratamiento y seguimiento de heridas agudas y crónicas en pacientes pediátricos, con el objetivo de acelerar su recuperación y prevenir complicaciones. Se trabaja con técnicas avanzadas y un enfoque integral. Para mayor información, te recomendamos acudir directamente al área o comunicarte por los canales oficiales del hospital."
+            ]
+        },
+        {
+            "tag": "cobranza",
+            "preguntas": [
+                "cobranza",
+                "cobro",
+                "pago",
+                "pagar",
+                "cobrar",
+                "area de cobro",
+                "area de pago",
+                "area de cobranza",
+                "departamento de cobranza",
+                "que hacen en cobranza",
+                "funcion de cobranza",
+                "donde esta cobranza",
+                "me pueden atender en cobranza",
+                "a donde voy a pagar",
+                "donde se hacen los pagos",
+                "informacion de cobranza"
+            ],
+            "respuestas": [
+                "El área de Cobranza se encarga de gestionar los pagos correspondientes a los servicios médicos brindados en el hospital. Aquí se reciben los pagos de consultas, estudios, procedimientos y otros servicios, además de brindar información relacionada con tarifas y métodos de pago. Para atención personalizada, te recomendamos acudir directamente al área o comunicarte a través de los canales oficiales."
+            ]
+        },
+        {
+            "tag": "cocina",
+            "preguntas": [
+                "cocina",
+                "area de cocina",
+                "departamento de cocina",
+                "que hacen en cocina",
+                "funcion de cocina",
+                "quien trabaja en cocina",
+                "donde esta la cocina",
+                "comida del hospital",
+                "quien prepara la comida",
+                "informacion de cocina"
+            ],
+            "respuestas": [
+                "El área de Cocina es la encargada de preparar y distribuir los alimentos para los pacientes, personal médico y administrativo del hospital. Su labor es fundamental para garantizar una alimentación nutritiva, segura y adecuada a las necesidades médicas de cada paciente, siguiendo estrictos controles de higiene y calidad. Para más detalles, puedes acudir directamente al área o informarte a través de los canales oficiales."
+            ]
+        },
+        {
+            "tag": "consulta_externa",
+            "preguntas": [
+                "consulta externa",
+                "area de consulta externa",
+                "departamento de consulta externa",
+                "quien esta en consulta externa",
+                "quien es el encargado de consulta externa",
+                "que hacen en consulta externa",
+                "informacion de consulta externa",
+                "como funciona consulta externa",
+                "me pueden atender en consulta externa",
+                "consultas medicas",
+                "consultas",
+                "consulta",
+                "externa",
+                "consultas pediátricas",
+                "atencion medica pediatrica",
+                "atencion medica"
+            ],
+            "respuestas": [
+                "Aquí se brinda atención médica especializada a pacientes pediátricos en un entorno ambulatorio, lo que permite recibir diagnóstico, tratamiento y seguimiento sin necesidad de hospitalización. Es una de las áreas clave para la detección temprana y el control de diversas enfermedades. Para más información, puedes acudir directamente al área o contactar por los canales oficiales del hospital."
+            ]
+        },
+        {
+            "tag": "contabilidad_oficina",
+            "preguntas": [
+                "contabilidad",
+                "contabilidad oficina",
+                "oficina de contabilidad",
+                "donde esta la oficina de contabilidad",
+                "ubicacion de la oficina de contabilidad",
+                "horario de la oficina de contabilidad",
+                "quien esta en la oficina de contabilidad",
+                "quien es el encargado de la oficina de contabilidad",
+                "que hacen en la oficina de contabilidad",
+                "informacion de la oficina de contabilidad",
+                "como funciona la oficina de contabilidad",
+                "me pueden ayudar en la oficina de contabilidad",
+                "atencion en oficina de contabilidad",
+                "consultas en oficina de contabilidad",
+                "tramites en oficina de contabilidad",
+                "recibos en oficina de contabilidad",
+                "facturas en oficina de contabilidad",
+                "cuentas por pagar en oficina de contabilidad",
+                "cuentas por cobrar en oficina de contabilidad"
+            ],
+            "respuestas": [
+                "La oficina de contabilidad es responsable de gestionar todo lo relacionado con pagos, facturación, recibos y control financiero del hospital. Puedes acudir para resolver dudas sobre trámites contables, solicitar recibos o consultar sobre cuentas por pagar o cobrar. Está disponible en horario de oficina y también puedes comunicarte por los canales oficiales."
+            ]
+        },
+        {
+            "tag": "dental",
+            "preguntas": [
+                "estomatologia",
+                "estomatologo",
+                "odontologo",
+                "odontologia",
+                "odontologia pediatrica",
+                "odontopediatria",
+                "ortodoncia",
+                "ortodonsia",
+                "dental",
+                "area dental",
+                "departamento dental",
+                "consultorio dental",
+                "donde esta el area dental",
+                "ubicacion de dental",
+                "quien esta en el area dental",
+                "quien es el encargado de dental",
+                "que hacen en dental",
+                "informacion de dental",
+                "como funciona el area dental",
+                "atencion dental",
+                "consultas dentales",
+                "tratamientos dentales",
+                "citas dentales",
+                "me pueden atender en dental",
+                "servicios dentales"
+            ],
+            "respuestas": [
+                "El área dental del hospital ofrece atención odontológica especializada para niños y adolescentes, incluyendo consultas, tratamientos preventivos y curativos, así como servicios de Estomatología y Ortodoncia. Puedes acudir para programar una cita o recibir orientación sobre salud bucal. Para más información, visita directamente el consultorio dental o comunícate por los canales oficiales."
+            ]
+        },
+        {
+            "tag": "enfermeria_ensenanza",
+            "preguntas": [
+                "enfermeria",
+                "ensenanza",
+                "enseñanza",
+                "enfermeria ensenanza",
+                "area de enfermeria ensenanza",
+                "departamento de enfermeria ensenanza",
+                "oficina de enfermeria ensenanza",
+                "quien esta en enfermeria ensenanza",
+                "quien es el encargado de enfermeria ensenanza",
+                "que hacen en enfermeria ensenanza",
+                "informacion de enfermeria ensenanza",
+                "como funciona enfermeria ensenanza",
+                "me pueden ayudar en enfermeria ensenanza",
+                "formacion en enfermeria",
+                "capacitacion de enfermeria",
+                "programas de ensenanza en enfermeria",
+                "ensenanza para personal de enfermeria",
+                "enfermeria enseñanza",
+                "area de enfermeria enseñanza",
+                "departamento de enfermeria enseñanza",
+                "oficina de enfermeria enseñanza",
+                "quien esta en enfermeria enseñanza",
+                "quien es el encargado de enfermeria enseñanza",
+                "que hacen en enfermeria enseñanza",
+                "informacion de enfermeria enseñanza",
+                "como funciona enfermeria enseñanza",
+                "me pueden ayudar en enfermeria enseñanza",
+                "formacion en enfermeria",
+                "capacitacion de enfermeria",
+                "programas de enseñanza en enfermeria",
+                "enseñanza para personal de enfermeria"
+            ],
+            "respuestas": [
+                "Esta área se encarga de la capacitación, actualización y formación continua del personal de enfermería. Aquí se coordinan programas educativos, talleres y actividades académicas para fortalecer las competencias profesionales del personal. Para más información, por favor utiliza los canales oficiales."
+            ]
+        },
+        {
+            "tag": "enfermeria_jefatura",
+            "preguntas": [
+                "enfermeria",
+                "jefatura",
+                "jefatura enfermeria secretaria",
+                "enfermeria jefatura secretaria",
+                "jefatura de enfermeria secretaria",
+                "enfermeria de jefatura",
+                "enfermeria jefatura",
+                "jefatura de enfermeria",
+                "area de enfermeria jefatura",
+                "departamento de enfermeria jefatura",
+                "secretaria de jefatura de enfermeria",
+                "quien esta en enfermeria jefatura",
+                "quien es el encargado de enfermeria jefatura",
+                "quien es la jefa de enfermeria",
+                "informacion de enfermeria jefatura",
+                "como funciona enfermeria jefatura",
+                "me pueden ayudar en enfermeria jefatura",
+                "direccion de enfermeria",
+                "coordinacion de enfermeria"
+            ],
+            "respuestas": [
+                "Área encargada de coordinar, supervisar y organizar al personal de enfermería en todas las áreas del hospital. Su función principal es garantizar una atención segura, eficiente y de calidad para los pacientes. También se encarga de establecer lineamientos, horarios y asignaciones del personal. Para más información, por favor utiliza los canales oficiales."
+            ]
+        },
+        {
+            "tag": "enfermeria_subjefatura",
+            "preguntas": [
+                "subjefatura",
+                "subjefatura enfermeria",
+                "enfermeria subjefatura",
+                "subjefatura de enfermeria",
+                "area de enfermeria subjefatura",
+                "departamento de enfermeria subjefatura",
+                "oficina de subjefatura de enfermeria",
+                "quien esta en enfermeria subjefatura",
+                "quien es el encargado de enfermeria subjefatura",
+                "quien es la subjefa de enfermeria",
+                "informacion de enfermeria subjefatura",
+                "como funciona enfermeria subjefatura",
+                "me pueden ayudar en enfermeria subjefatura",
+                "apoyo de la jefatura de enfermeria",
+                "coordinacion adjunta de enfermeria"
+            ],
+            "respuestas": [
+                "Esta área se encarga de apoyar en la supervisión, organización y gestión del personal de enfermería, trabajando en conjunto con la jefatura para asegurar el cumplimiento de los estándares de atención y operatividad en los diferentes servicios. Para más información, por favor utiliza los canales oficiales."
+            ]
+
+        },
+        {
+            "tag": "ensenanza_dos",
+            "preguntas": [
+                "dos",
+                "enseñanza dos",
+                "area de enseñanza dos",
+                "departamento de enseñanza dos",
+                "oficina de enseñanza dos",
+                "quien esta en enseñanza dos",
+                "quien es el encargado de enseñanza dos",
+                "informacion de enseñanza dos",
+                "como funciona enseñanza dos",
+                "me pueden ayudar en enseñanza dos",
+                "programas de enseñanza dos",
+                "formacion en enseñanza dos",
+                "cursos de enseñanza dos",
+                "ensenanza dos",
+                "area de enseñanza dos",
+                "departamento de enseñanza dos",
+                "oficina de enseñanza dos",
+                "quien esta en enseñanza dos",
+                "quien es el encargado de enseñanza dos",
+                "informacion de enseñanza dos",
+                "como funciona enseñanza dos",
+                "me pueden ayudar en enseñanza dos",
+                "programas de enseñanza dos",
+                "formacion en enseñanza dos",
+                "cursos de enseñanza dos"
+            ],
+            "respuestas": [
+                "Esta área se encarga de coordinar y administrar los programas educativos y de formación para el personal, enfocándose en la actualización y capacitación continua. También gestiona los cursos y talleres de enseñanza dentro del hospital. Para más información, por favor utiliza los canales oficiales."
+            ]
+        },
+        {
+            "tag": "ensenanza_investigacion",
+            "preguntas": [
+                "investigacion",
+                "investigasion",
+                "enseñanza investigacion",
+                "area de enseñanza investigacion",
+                "departamento de enseñanza investigacion",
+                "oficina de enseñanza investigacion",
+                "quien esta en enseñanza investigacion",
+                "quien es el encargado de enseñanza investigacion",
+                "informacion de enseñanza investigacion",
+                "como funciona enseñanza investigacion",
+                "me pueden ayudar en enseñanza investigacion",
+                "proyectos de investigacion",
+                "formacion en investigacion",
+                "actividades de enseñanza investigacion",
+                "ensenanza investigacion",
+                "area de ensenanza investigacion",
+                "departamento de ensenanza investigacion",
+                "oficina de ensenanza investigacion",
+                "quien esta en ensenanza investigacion",
+                "quien es el encargado de ensenanza investigacion",
+                "informacion de ensenanza investigacion",
+                "como funciona ensenanza investigacion",
+                "me pueden ayudar en ensenanza investigacion",
+                "actividades de ensenanza investigacion"
+            ],
+            "respuestas": [
+                "Esta área se encarga de promover y coordinar actividades académicas y de investigación en el hospital, fomentando la generación de conocimiento y el desarrollo científico en el ámbito pediátrico. Además, apoya a estudiantes y profesionales en la elaboración de proyectos de investigación. Para más información, por favor utiliza los canales oficiales."
+            ]
+        }
+    ]
+}

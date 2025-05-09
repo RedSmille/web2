@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPS - BOT</title>
+    
+    <link rel="icon" href="https://hospitalpediatrico.org/oficial/wp-content/uploads/2022/08/icon-logo-hps.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="Estilos.css">
+
+    <div class="container2">   
+        <button class="dark-mode-button" onclick="toggleDarkMode()">Modo Oscuro</button>
+    </div><br>
+
+</head>
+
+<body>
+    <div class="container header-container">
+        <img decoding="async" src="https://hospitalpediatrico.org/oficial/wp-content/uploads/2022/08/icon-logo-hps.png" alt="Logo HPS">
+        
+        <div class="dropdown">
+            <button onclick="toggleMenu()" class="button">Especialidades</button>
+            <div id="especialidadesMenu" class="dropdown-content scrollable">
+                <button class="info" onclick="Mostrar('Alergologia')">Alergologia</button>
+                <button class="info" onclick="Mostrar('Cardiologia')">Cardiologia</button>
+                <button class="info" onclick="Mostrar('Cirugia cardiovascular')">Cirugia cardiovascular</button>
+                <button class="info" onclick="Mostrar('Cirugia general')">Cirugia general</button>
+                <button class="info" onclick="Mostrar('Cirugia plastica')">Cirugia plastica</button>
+                <button class="info" onclick="Mostrar('Clinica de obesidad')">Clinica de obesidad</button>
+                <button class="info" onclick="Mostrar('Comunicacion humana')">Comunicacion humana</button>
+                <button class="info" onclick="Mostrar('Cons. de urgencias')">Cons. de urgencias</button>
+                <button class="info" onclick="Mostrar('Consulta externa')">Consulta externa</button>
+                <button class="info" onclick="Mostrar('Dermatologia')">Dermatologia</button>
+                <button class="info" onclick="Mostrar('Endocrinologia')">Endocrinologia</button>
+                <button class="info" onclick="Mostrar('Estomatologia')">Estomatologia</button>
+                <button class="info" onclick="Mostrar('Foniatria y audiologia')">Foniatria y audiologia</button>
+                <button class="info" onclick="Mostrar('Gastroenterologia')">Gastroenterologia</button>
+                <button class="info" onclick="Mostrar('Genetica')">Genetica</button>
+                <button class="info" onclick="Mostrar('Hematologia')">Hematologia</button>
+                <button class="info" onclick="Mostrar('Infectologia')">Infectologia</button>
+                <button class="info" onclick="Mostrar('Medicina fisica y rehabilitacion')">Medicina fisica y rehabilitacion</button>
+                <button class="info" onclick="Mostrar('Medicina interna')">Medicina interna</button>
+                <button class="info" onclick="Mostrar('Nefrologia')">Nefrologia</button>
+                <button class="info" onclick="Mostrar('Neonatologia')">Neonatologia</button>
+                <button class="info" onclick="Mostrar('Neumologia')">Neumologia</button>
+                <button class="info" onclick="Mostrar('Neurologia')">Neurologia</button>
+                <button class="info" onclick="Mostrar('Neurocirugia')">Neurocirugia</button>
+                <button class="info" onclick="Mostrar('Nutricion')">Nutricion</button>
+                <button class="info" onclick="Mostrar('Oftalmologia')">Oftalmologia</button>
+                <button class="info" onclick="Mostrar('Oncologia')">Oncologia</button>
+                <button class="info" onclick="Mostrar('Ortodoncia')">Ortodoncia</button>
+                <button class="info" onclick="Mostrar('Otorrinolaringologia')">Otorrinolaringologia</button>
+                <button class="info" onclick="Mostrar('Psicologia')">Psicologia</button>
+                <button class="info" onclick="Mostrar('Traumatologia y ortopedia')">Traumatologia y ortopedia</button>
+                <button class="info" onclick="Mostrar('Urologia')">Urologia</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>BOT - Hospital Pediátrico de Sinaloa</h1>
+        <div id="chatBox" class="chat-box"></div>
+        
+        <div class="chat-input-container">
+            <input id="userInput" class="chat-input" placeholder="Pregunta lo que quieras" onkeydown="if(event.key === 'Enter') sendMessage();">
+            <button class="button" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        function showMessage(message, type) {
+            const chatBox = document.getElementById('chatBox');
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', type);
+            messageDiv.innerHTML = message.replace(/\n/g, '<br>');
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+        
+        // Función para enviar mensajes
+        async function sendMessage() {
+            const userInput = document.getElementById('userInput');
+            const chatBox = document.getElementById('chatBox');
+            const message = userInput.value.trim();
+
+            if (!message) return;
+
+            showMessage(message, 'user');
+            userInput.value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ prompt: message })
+            });
+
+            const result = await response.json();
+
+            if (Array.isArray(result.response)) {
+                result.response.forEach(msg => showMessage(msg, 'bot'));
+            } else {
+                showMessage(result.response, 'bot');
+            }
+        }
+
+        function Mostrar(text) {
+            // Ocultar la lista de especialidades
+            const menu = document.getElementById("especialidadesMenu");
+            if (menu) {
+                menu.style.display = "none";
+            }
+
+            // Enviar el texto como si fuera escrito por el usuario
+            const input = document.getElementById("userInput");
+            input.value = text;
+            sendMessage();
+        }
+
+        // Activar modo oscuro
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Mensajes de bienvenida con imagen
+        window.onload = function() {
+            showMessage("Hola, soy el <b>Chat BOT</b> del Hospital Pediátrico de Sinaloa. ¿Quieres saber algo?", 'bot');
+            showMessage("Pregúntame lo que quieras sobre la organización", 'bot');
+            //showMessage('<div class="cssload-main"><div class="cssload-heart"><span class="cssload-heartL"></span><span class="cssload-heartR"></span><span class="cssload-square"></span></div><div class="cssload-shadow"></div></div>', 'bot');
+
+            showMessage('<img decoding="async" width="150" class="elemento_interno" src="HPS3.png" alt="Homero">', 'bot');
+
+            // Esto pone automáticamente el foco en el input
+            document.getElementById('userInput').focus();
+            
+        }; 
+
+        function toggleMenu() {
+            var menu = document.getElementById("especialidadesMenu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+
+    </script>
+</body>
+</html>
