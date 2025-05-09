@@ -84,36 +84,34 @@ class ManejadorChatbot(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b'Archivo no encontrado')
 
-   def do_POST(self):
-    try:
-        LongitudContenido = int(self.headers.get('Content-Length', 0))
-        DatosPost = self.rfile.read(LongitudContenido)
-        Datos = json.loads(DatosPost.decode('utf-8'))  # Asegurar decodificación correcta
-        Pregunta = Datos.get('prompt', '').strip()
+    def do_POST(self):
+        try:
+            LongitudContenido = int(self.headers.get('Content-Length', 0))
+            DatosPost = self.rfile.read(LongitudContenido)
+            Datos = json.loads(DatosPost.decode('utf-8'))  # Asegurar decodificación correcta
+            Pregunta = Datos.get('prompt', '').strip()
 
-        if not Pregunta:
-            Respuesta = {"response": ["Por favor, ingresa un mensaje o pregunta."]}
-        else:
-            IntentosDetectados = PredecirIntencion(Pregunta)
-            TextoRespuesta = ObtenerRespuesta(IntentosDetectados, Intentos)
-            Respuesta = {"response": TextoRespuesta}
+            if not Pregunta:
+                Respuesta = {"response": ["Por favor, ingresa un mensaje o pregunta."]}
+            else:
+                IntentosDetectados = PredecirIntencion(Pregunta)
+                TextoRespuesta = ObtenerRespuesta(IntentosDetectados, Intentos)
+                Respuesta = {"response": TextoRespuesta}
 
-        # Enviar la respuesta JSON correctamente
-        self.send_response(200)
-        self.send_header('Content-Type', 'application/json')
-        self.end_headers()
-        self.wfile.write(json.dumps(Respuesta, ensure_ascii=False).encode('utf-8'))
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps(Respuesta, ensure_ascii=False).encode('utf-8'))
 
-    except Exception as e:
-        import traceback
-        self.send_response(500)
-        self.send_header('Content-Type', 'application/json')
-        self.end_headers()
-        ErrorMensaje = json.dumps({"error": str(e)}, ensure_ascii=False).encode('utf-8')
-        self.wfile.write(ErrorMensaje)
-        print("❌ Error en do_POST:")
-        traceback.print_exc()  # << Esto imprimirá el error completo en la terminal
-
+        except Exception as e:
+            import traceback
+            self.send_response(500)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            ErrorMensaje = json.dumps({"error": str(e)}, ensure_ascii=False).encode('utf-8')
+            self.wfile.write(ErrorMensaje)
+            print("❌ Error en do_POST:")
+            traceback.print_exc()
 
 # Inicia el servidor
 with socketserver.ThreadingTCPServer(('0.0.0.0', PUERTO), ManejadorChatbot) as httpd:
