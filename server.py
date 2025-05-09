@@ -84,42 +84,36 @@ class ManejadorChatbot(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b'Archivo no encontrado')
 
-    def do_POST(self):
-        try:
-            LongitudContenido = int(self.headers.get('Content-Length', 0))
-            DatosPost = self.rfile.read(LongitudContenido)
+   def do_POST(self):
+    try:
+        LongitudContenido = int(self.headers.get('Content-Length', 0))
+        DatosPost = self.rfile.read(LongitudContenido)
+        Datos = json.loads(DatosPost.decode('utf-8'))  # Asegurar decodificación correcta
+        Pregunta = Datos.get('prompt', '').strip()
 
-            print("📥 Datos recibidos (raw):", DatosPost)
+        if not Pregunta:
+            Respuesta = {"response": ["Por favor, ingresa un mensaje o pregunta."]}
+        else:
+            IntentosDetectados = PredecirIntencion(Pregunta)
+            TextoRespuesta = ObtenerRespuesta(IntentosDetectados, Intentos)
+            Respuesta = {"response": TextoRespuesta}
 
-            Datos = json.loads(DatosPost.decode('utf-8'))
-            print("📥 Datos decodificados (JSON):", Datos)
+        # Enviar la respuesta JSON correctamente
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.end_headers()
+        self.wfile.write(json.dumps(Respuesta, ensure_ascii=False).encode('utf-8'))
 
-            Pregunta = Datos.get('prompt', '').strip()
-            print("❓ Pregunta recibida:", Pregunta)
+    except Exception as e:
+        import traceback
+        self.send_response(500)
+        self.send_header('Content-Type', 'application/json')
+        self.end_headers()
+        ErrorMensaje = json.dumps({"error": str(e)}, ensure_ascii=False).encode('utf-8')
+        self.wfile.write(ErrorMensaje)
+        print("❌ Error en do_POST:")
+        traceback.print_exc()  # << Esto imprimirá el error completo en la terminal
 
-            if not Pregunta:
-                Respuesta = {"response": ["Por favor, ingresa un mensaje o pregunta."]}
-            else:
-                IntentosDetectados = PredecirIntencion(Pregunta)
-                print("🔎 Intenciones detectadas:", IntentosDetectados)
-
-                TextoRespuesta = ObtenerRespuesta(IntentosDetectados, Intentos)
-                print("💬 Respuesta generada:", TextoRespuesta)
-
-                Respuesta = {"response": TextoRespuesta}
-
-            self.send_response(200)
-            self.send_header('Content-Type', 'application/json')
-            self.end_headers()
-            self.wfile.write(json.dumps(Respuesta, ensure_ascii=False).encode('utf-8'))
-
-        except Exception as e:
-            print("❌ Error en do_POST:", str(e))
-            self.send_response(500)
-            self.send_header('Content-Type', 'application/json')
-            self.end_headers()
-            ErrorMensaje = json.dumps({"error": str(e)}, ensure_ascii=False).encode('utf-8')
-            self.wfile.write(ErrorMensaje)
 
 # Inicia el servidor
 with socketserver.ThreadingTCPServer(('0.0.0.0', PUERTO), ManejadorChatbot) as httpd:
