@@ -14,8 +14,7 @@ import locale
 
 # Descargar el tokenizer 'punkt' si no está disponible
 import nltk
-nltk.download('punkt')
-
+nltk.data.path.append('./nltk_data')
 
 # Intentar establecer localización en español
 try:
