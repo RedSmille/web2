@@ -4,7 +4,6 @@ import json
 import os
 import pickle
 import numpy as np
-import nltk
 import unicodedata
 from urllib.parse import urlparse, parse_qs
 from nltk.stem import WordNetLemmatizer
@@ -14,10 +13,8 @@ from respuestas_chatbot import ObtenerRespuesta
 import locale
 
 # Descargar el tokenizer 'punkt' si no está disponible
-try:
-    nltk.data.find("tokenizers/punkt")
-except LookupError:
-    nltk.download("punkt")
+import nltk
+nltk.download('punkt')
 
 # Intentar establecer localización en español
 try:
