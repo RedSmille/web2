@@ -16,6 +16,7 @@ import locale
 import nltk
 nltk.download('punkt')
 
+
 # Intentar establecer localización en español
 try:
     locale.setlocale(locale.LC_TIME, 'es_ES.UTF-8')
